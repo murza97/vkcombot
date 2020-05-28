@@ -1,0 +1,12 @@
+{
+    "name": "murza/vk_bot",
+    "authors": [
+        {
+            "name": "murza97",
+            "email": "mursalimov.97@mail.ru"
+        }
+    ],
+    "require": {
+        "vkcom/vk-php-sdk": "^5.101"
+    }
+}
