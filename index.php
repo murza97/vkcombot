@@ -9,6 +9,17 @@
     $application_token = '86e8d89114354ce60268a86e01fa0f9e3059f78febd1dc1218a6f3db3778031d3c15f6f8a9109760ba95e';
     $group_token = '921404a217d01772807bea0f244dde019cf3f6bd8de477eecb73da98fb636c7e49fa9a9c6490a61b40adc';
 
+    $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    $server = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $db = substr($url["path"], 1);
+
+    mysqli_connect($server, $username, $password);
+
+    mysqli_select_db($db, 1);
+
     $data = json_decode(file_get_contents('php://input'));
     
     switch ($data->type) {

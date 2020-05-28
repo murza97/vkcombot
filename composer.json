@@ -7,6 +7,7 @@
         }
     ],
     "require": {
-        "vkcom/vk-php-sdk": "^5.101"
+        "vkcom/vk-php-sdk": "^5.101",
+        "ext-mysqlnd": "^0.0.0"
     }
 }
